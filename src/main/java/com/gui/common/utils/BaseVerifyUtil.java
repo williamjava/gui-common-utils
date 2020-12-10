@@ -8,9 +8,7 @@ import java.util.regex.Pattern;
 /**
  * [基础验证工具类]
  * 
- * @Package Name:com.happy.common.utils
- * @Creator:yangguoqing
- * @Date:2018年5月2日下午4:42:25
+ * @author wgui
  */
 public class BaseVerifyUtil {
 
@@ -87,17 +85,20 @@ public class BaseVerifyUtil {
 	 * @return
 	 */
 	public static String trim(String str) {
-		if (str == null)
+		if (str == null) {
 			return null;
+		}
 		str = PATTERN_ASC_16.matcher(str).replaceAll(" ");
 		Matcher m = PATTERN_TRIM.matcher(str);
 		if (m.find()) {
 			str = m.group(1);
-			if (str == null)
+			if (str == null) {
 				str = m.group(2);
+			}
 		}
-		if (str == null)
+		if (str == null) {
 			return "";
+		}
 		return str;
 	}
 
@@ -133,10 +134,11 @@ public class BaseVerifyUtil {
 	 * @Date:2016年5月12日 下午1:33:35
 	 */
 	public static boolean isNotSplit(String paraments, String split) {
-		if (paraments.contains(split))
+		if (paraments.contains(split)) {
 			return true;
-		else
+		} else {
 			return false;
+		}
 	}
 
 	/**

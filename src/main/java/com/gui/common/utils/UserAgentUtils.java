@@ -1,8 +1,10 @@
 package com.gui.common.utils;
 
 
+import com.gui.common.utils.model.IpInfo;
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.UserAgent;
+
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -11,18 +13,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * UserAgent 工具类
- * <p>
- * Description:
- * </p>
+ * 客户端信息获取工具类
  *
-
+ * @author wgui
  */
 public class UserAgentUtils {
 
     /**
      * 获取用户代理
-
      */
     public static UserAgent getUserAgent(HttpServletRequest request) {
         return UserAgent.parseUserAgentString(request.getHeader("User-Agent"));
@@ -31,7 +29,6 @@ public class UserAgentUtils {
     /**
      * 获取用户浏览器
      *
-
      */
     public static Browser getBrowser(HttpServletRequest request) {
         return getUserAgent(request).getBrowser();

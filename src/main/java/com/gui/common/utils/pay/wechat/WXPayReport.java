@@ -1,4 +1,4 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 
 import org.apache.http.HttpEntity;
@@ -24,7 +24,6 @@ import java.util.concurrent.ThreadFactory;
  * 交易保障
  */
 public class WXPayReport {
-
     public static class ReportInfo {
 
         /**

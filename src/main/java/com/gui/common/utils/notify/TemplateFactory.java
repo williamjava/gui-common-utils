@@ -111,8 +111,9 @@ public class TemplateFactory {
 			log.error(e.toString(), e);
 		} finally {
 			try {
-				if (out != null)
+				if (out != null) {
 					out.close();
+				}
 			} catch (IOException e) {
 				log.error(e.toString(), e);
 			}

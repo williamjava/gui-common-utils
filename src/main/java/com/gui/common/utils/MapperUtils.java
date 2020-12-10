@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author ZhangQian logeed@aliyun.com
- * @version 1.0
- * @date 2019/9/6 8:44
+ * 对象操作工具类
+ *
+ * @author wgui
  */
 public class MapperUtils {
     private final static ObjectMapper objectMapper = new ObjectMapper();

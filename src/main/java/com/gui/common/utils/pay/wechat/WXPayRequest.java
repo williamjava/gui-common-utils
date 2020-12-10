@@ -1,4 +1,4 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 
 import org.apache.http.HttpEntity;

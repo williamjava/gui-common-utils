@@ -1,4 +1,4 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 import lombok.NoArgsConstructor;
 
@@ -8,7 +8,6 @@ import java.net.URLConnection;
 
 @NoArgsConstructor
 public class WePayConfig extends WXPayConfig {
-
     private String appID;
     private String mchID;
     private String key;

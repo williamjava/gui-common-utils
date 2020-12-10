@@ -24,9 +24,7 @@ import java.util.Properties;
 /**
  * Sendmail:发邮件主要类
  *
- * @Project Name:cargo
- * @File Name:Sendmail.java
- * @Package Name:com.cargo.common.mail
+ * @author wgui
  */
 public class SendMail {
 

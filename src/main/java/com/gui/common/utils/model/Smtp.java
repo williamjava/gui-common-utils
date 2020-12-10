@@ -1,12 +1,11 @@
-/**
- * Copyright (c) 2016,http://www.365wuliu.com/  All Rights Reserved.
- */
 package com.gui.common.utils.model;
 
 import lombok.Data;
 
 /**
  * Smtp:邮件配置对象
+ *
+ * @author wgui
  */
 @Data
 public class Smtp {

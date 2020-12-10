@@ -1,13 +1,10 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 
 import java.io.InputStream;
 import java.io.Serializable;
 
 public abstract class WXPayConfig implements Serializable {
-
-
-
     /**
      * 获取 App ID
      *

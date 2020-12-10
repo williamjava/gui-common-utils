@@ -1,11 +1,5 @@
 package com.gui.common.utils;
 
-/**
- * @author ZHANGQIAN
- * @Email:261529989@qq.com
- * @date 2020-07-08 14:26
- */
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
@@ -15,22 +9,15 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 import java.util.Date;
 
-
+/**
+ * 本地时间操作工具类
+ *
+ * @author wgui
+ */
 public final class LocalDateTimeUtil {
-
     private LocalDateTimeUtil() {
 
     }
-
-    // 获取当前时间的LocalDateTime对象
-    // LocalDateTime.now()
-
-    // 根据年月日构建
-    // LocalDateTime.of()
-
-    // 比较日期先后
-    // LocalDateTime.now().isBefore()
-    // LocalDateTime.now().isAfter()
 
     /**
      * Date转换为LocalDateTime.

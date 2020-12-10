@@ -1,20 +1,17 @@
 package com.gui.common.utils;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.*;
 
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-
-
+/**
+ * 请求与相响应操作工具类
+ *
+ * @author wgui
+ */
 public class OkHttpClientUtil {
     private static final int READ_TIMEOUT = 100;
     private static final int CONNECT_TIMEOUT = 60;

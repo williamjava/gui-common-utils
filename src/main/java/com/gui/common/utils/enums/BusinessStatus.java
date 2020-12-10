@@ -1,11 +1,10 @@
-package com.gui.common.utils;
+package com.gui.common.utils.enums;
 
 /**
- * @author ZHANGQIAN
- * @Email:261529989@qq.com
- * @date 2020-07-08 18:04
+ * 业务状态枚举
+ *
+ * @author wgui
  */
-
 public enum BusinessStatus {
     /**
      * 管理员 - 账号密码错误

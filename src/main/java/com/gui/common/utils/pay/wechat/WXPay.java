@@ -1,10 +1,9 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class WXPay {
-
     private WXPayConfig config;
     private WXPayConstants.SignType signType;
     private boolean autoReport;

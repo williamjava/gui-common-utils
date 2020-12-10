@@ -1,4 +1,4 @@
-package com.gui.common.utils.pay.sdk.we;
+package com.gui.common.utils.pay.wechat;
 
 import org.apache.http.client.HttpClient;
 
@@ -6,7 +6,6 @@ import org.apache.http.client.HttpClient;
  * 常量
  */
 public class WXPayConstants {
-
     public enum SignType {
         MD5, HMACSHA256
     }

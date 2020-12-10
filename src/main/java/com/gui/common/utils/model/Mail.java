@@ -7,6 +7,7 @@ import java.util.Vector;
 /**
  * Mail:邮件对象
  *
+ * @author wgui
  */
 @Data
 public class Mail {

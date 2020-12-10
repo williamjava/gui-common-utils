@@ -8,38 +8,38 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 
 /**
- * description: 短信工具
- * date: 2020/9/27 10:12
- * author: bxt
- * version: 1.0
+ * 短信发送工具类(阿里云)
+ *
+ * @author wgui
  */
-public class SmsUtils {
-
-    //产品名称:云通信短信API产品,开发者无需替换
-    static final String product = "Dysmsapi";
-    //产品域名,开发者无需替换
-    static final String domain = "dysmsapi.aliyuncs.com";
-
-    //签名
-    static final String sign = "环球义达";
+public class SmsSendUtils {
+    /**
+     * 产品名称:云通信短信API产品,开发者无需替换
+     */
+    static final String PRODUCT = "Dysmsapi";
+    /**
+     * 产品域名,开发者无需替换
+     */
+    static final String DOMAIN = "dysmsapi.aliyuncs.com";
 
     /**
      *
      * @param phone 手机号
      * @param param 字符串参数 例:"{\"code\":\"123456\"}"
      * @param templateId 模板id
-     * @param accessKeyId
-     * @param accessKeySecret
+     * @param sign 短信签名
+     * @param accessKeyId key
+     * @param accessKeySecret 密钥
      * @return code="OK" 成功
      */
-    public static SendSmsResponse sendSms(String phone, String param, String templateId, String accessKeyId, String accessKeySecret){
+    public static SendSmsResponse sendSms(String phone, String param, String templateId, String sign, String accessKeyId, String accessKeySecret){
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
         System.setProperty("sun.net.client.defaultReadTimeout", "10000");
         //初始化acsClient,暂不支持region化
         IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou", accessKeyId, accessKeySecret);
         try {
-            DefaultProfile.addEndpoint("cn-hangzhou", "cn-hangzhou", product, domain);
+            DefaultProfile.addEndpoint("cn-hangzhou", "cn-hangzhou", PRODUCT, DOMAIN);
             IAcsClient acsClient = new DefaultAcsClient(profile);
             //组装请求对象-具体描述见控制台-文档部分内容
             SendSmsRequest request = new SendSmsRequest();
@@ -56,7 +56,7 @@ public class SmsUtils {
         } catch (Exception e) {
             e.printStackTrace();
             SendSmsResponse sendSmsResponse = new SendSmsResponse();
-            sendSmsResponse.setCode("-1");//失败
+            sendSmsResponse.setCode("-1");
             sendSmsResponse.setMessage("发送短信超时");
             return sendSmsResponse;
         }

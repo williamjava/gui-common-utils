@@ -1,17 +1,17 @@
-/**
- * Copyright (c) 2016,http://www.365wuliu.com/  All Rights Reserved.
- */
 package com.gui.common.utils.notify;
 
 import com.gui.common.utils.model.Mail;
 import com.gui.common.utils.model.Smtp;
+import lombok.Builder;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 
 /**
- * MailSendUtil:发邮件
+ * 邮件发送工具类
  *
+ * @author wgui
  */
 @Slf4j
 public class MailSendUtil {
@@ -27,16 +27,17 @@ public class MailSendUtil {
 	 * @param templateName
 	 *            模板文件名称
 	 */
-	public static boolean sendMailByTemplate(String receiver, String subject, Map<String, String> map, String templateName) {
+	public static boolean sendMailByTemplate(EmailPreDto preDto, String receiver, String subject, Map<String, String> map, String templateName) {
 		try {
 			Smtp smtp = new Smtp();
 			smtp.host = "smtp.exmail.qq.com";
 			smtp.port = "465";
-			smtp.username = "cccl-service@ccc-l.com";
-			smtp.password = "NA5a484Xobsck8bc";
+			smtp.username = preDto.getUsername();
+			smtp.password = preDto.getPassword();
+
 			String maiBody = TemplateFactory.generateHtmlFromFtl(templateName, map);
 			Mail mail = new Mail();
-			mail.from = "cccl-service@ccc-l.com";
+			mail.from = preDto.getUsername();
 			mail.screenname = "service";
 			mail.subject = subject;
 			mail.content = maiBody;
@@ -51,4 +52,16 @@ public class MailSendUtil {
 		}
 	}
 
+	@Data
+	@Builder
+	static class EmailPreDto {
+		/**
+		 * 用户名
+		 */
+		private String username;
+		/**
+		 * 密码
+		 */
+		private String password;
+	}
 }

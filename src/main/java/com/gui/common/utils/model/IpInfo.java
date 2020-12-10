@@ -1,4 +1,4 @@
-package com.gui.common.utils;
+package com.gui.common.utils.model;
 
 import lombok.Data;
 
@@ -6,12 +6,11 @@ import java.io.Serializable;
 
 /**
  * IP 地址信息
-
-
+ *
+ * @author wgui
  */
 @Data
 public class IpInfo implements Serializable {
-
     private static final long serialVersionUID = -6246313701294144575L;
 
     private String ip;
